@@ -33,8 +33,8 @@ class TransparentActivity : Activity() {
         broadcastIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
         sendBroadcast(broadcastIntent)
 
-//        val activityIntent = AppUtils.getAppIntent(this, intent.action, data)
-//        startActivity(activityIntent)
+        val activityIntent = AppUtils.getAppIntent(this, intent.action, data)
+        startActivity(activityIntent)
 
         finish()
         overridePendingTransition(0, 0)
